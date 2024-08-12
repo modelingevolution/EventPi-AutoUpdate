@@ -1,0 +1,12 @@
+services:
+  autoupdater:
+    image: modelingevolution/autoupdater:latest
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "10"
+    volumes:
+      - /var/docker/production:/var/docker/production
+      - /var/run/docker.sock:/var/run/docker.sock
