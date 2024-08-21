@@ -1,6 +1,6 @@
 services:
   autoupdater:
-    image: modelingevolution/autoupdater:latest
+    image: modelingevolution/autoupdater:1.0.2
     restart: always
     ports:
       - 8080:8080
