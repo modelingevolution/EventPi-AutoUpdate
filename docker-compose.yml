@@ -2,6 +2,7 @@ services:
   autoupdater:
     image: modelingevolution/autoupdater:1.0.7
     restart: always
+    container_name: updater
     privileged: true
     ports:
       - 8081:5000
