@@ -3,7 +3,7 @@ services:
     image: modelingevolution/autoupdater:1.0.4
     restart: always
     ports:
-      - 8080:8080
+      - 8080:5000
     logging:
       driver: "json-file"
       options:
