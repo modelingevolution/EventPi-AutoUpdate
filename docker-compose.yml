@@ -1,7 +1,8 @@
 services:
   autoupdater:
-    image: modelingevolution/autoupdater:1.0.6
+    image: modelingevolution/autoupdater:1.0.7
     restart: always
+    privileged: true
     ports:
       - 8081:5000
     logging:
@@ -10,6 +11,7 @@ services:
         max-size: "25m"
         max-file: "10"
     volumes:
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
       - /var/docker/production:/var/docker/production
       - /var/run/docker.sock:/var/run/docker.sock
     
