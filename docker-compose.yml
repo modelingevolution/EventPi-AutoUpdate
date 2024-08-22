@@ -1,6 +1,6 @@
 services:
   autoupdater:
-    image: modelingevolution/autoupdater:1.0.2
+    image: modelingevolution/autoupdater:1.0.4
     restart: always
     ports:
       - 8080:8080
@@ -12,3 +12,4 @@ services:
     volumes:
       - /var/docker/production:/var/docker/production
       - /var/run/docker.sock:/var/run/docker.sock
+    
